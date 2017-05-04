@@ -76,6 +76,7 @@ function deleteEvent(event) {
     }
     
     $('#calendar').data('calendar').setDataSource(dataSource);
+    setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
 }
 
 function saveEvent() {
@@ -115,6 +116,7 @@ function saveEvent() {
     }
     
     $('#calendar').data('calendar').setDataSource(dataSource);
+    setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
     $('#event-modal').modal('hide');
 }
 
@@ -215,6 +217,7 @@ $(function() {
     $('#save-event').click(function() {
         saveEvent();
     });
+    setTimeout(function(){$('td[style^="box-shadow"]').addClass('disabled').css('box-shadow','')},100);
 });
 </script>
 </body>
